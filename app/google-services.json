@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "244512378255",
+    "project_id": "studyhub-382e8",
+    "storage_bucket": "studyhub-382e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244512378255:android:5976a64e3d85ea741b4ffa",
+        "android_client_info": {
+          "package_name": "com.studyhub.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVDMZ1UBZ6WFoCqUh3mQc7TclSksJbe-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

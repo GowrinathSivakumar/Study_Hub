@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/videoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/white">
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/subject_icon"
+                android:contentDescription="Video Thumbnail"
+                app:shapeAppearanceOverlay="@style/RoundedTopCorners" />
+
+            <!-- Lesson Badge (Premium Purple) -->
+            <TextView
+                android:id="@+id/tvLessonLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="@color/purple_accent_bright"
+                android:alpha="0.8"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="Lesson 1"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:elevation="4dp" />
+
+            <!-- Premium Play Button -->
+            <ImageView
+                android:id="@+id/ivPlayButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="@color/purple_accent_bright"
+                android:padding="15dp"
+                android:src="@android:drawable/ic_media_play"
+                app:tint="@color/white"
+                android:elevation="8dp"
+                android:contentDescription="Play Button" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvLessonTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lesson 1: Introduction"
+                android:textColor="@color/purple_dark_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_slideshow"
+                app:tint="@color/purple_accent_bright" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

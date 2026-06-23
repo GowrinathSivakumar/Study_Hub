@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The "Track" (Background of the bar) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dp" />
+            <!-- Using a light semi-transparent white so the dark purple progress stands out -->
+            <solid android:color="#40FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- The actual "Progress" (The moving part) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="10dp" />
+                <!-- Using your premium dark purple for the loader as requested -->
+                <solid android:color="@color/purple_dark_text" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Section with Logo and Welcome Message -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/logo_desc"
+            android:src="@drawable/app_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Study "
+                android:textColor="@color/study_red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hub"
+                android:textColor="@color/hub_blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_back"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_soft"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvChooseSubject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/choose_subject"
+                android:textColor="@color/purple_dark_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/svSubjects"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvChooseSubject">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <!-- Mathematics -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMathematics"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="24dp"
+                        android:text="@string/btn_mathematics"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_dark_text"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="20dp"
+                        app:icon="@android:drawable/ic_menu_edit"
+                        app:iconPadding="16dp"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/purple_accent_bright"
+                        app:rippleColor="@color/purple_premium_light" />
+
+                    <!-- Science -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnScience"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="24dp"
+                        android:text="@string/btn_science"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_dark_text"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="20dp"
+                        app:icon="@android:drawable/ic_menu_view"
+                        app:iconPadding="16dp"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/purple_accent_bright"
+                        app:rippleColor="@color/purple_premium_light" />
+
+                    <!-- English -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEnglishCommunication"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="24dp"
+                        android:text="@string/btn_english_communication"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_dark_text"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="20dp"
+                        app:icon="@android:drawable/ic_menu_send"
+                        app:iconPadding="16dp"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/purple_accent_bright"
+                        app:rippleColor="@color/purple_premium_light" />
+
+                    <!-- Computer Skills -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnComputerSkills"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="24dp"
+                        android:text="@string/btn_computer_skills"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_dark_text"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="20dp"
+                        app:icon="@android:drawable/ic_menu_preferences"
+                        app:iconPadding="16dp"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/purple_accent_bright"
+                        app:rippleColor="@color/purple_premium_light" />
+
+                    <!-- GK -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGeneralKnowledge"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="24dp"
+                        android:text="@string/btn_general_knowledge"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_dark_text"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="20dp"
+                        app:icon="@android:drawable/ic_menu_compass"
+                        app:iconPadding="16dp"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/purple_accent_bright"
+                        app:rippleColor="@color/purple_premium_light" />
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
